@@ -5,7 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun ./src/index.ts",
+    "dev": "bun run ./src/index.ts",
     "build": "bun build src/index.ts --compile --outfile build/yt2audio.exe"
   },
   "devDependencies": {
