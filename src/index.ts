@@ -83,7 +83,7 @@ async function run() {
   const titleProc = spawn({
     cmd: [ytDlpPath, "--print", "title", url],
     stdout: "pipe",
-    stderr: "inherit",
+    stderr: "pipe",
   });
 
   const rawTitle = await new Response(titleProc.stdout).text();
@@ -118,8 +118,8 @@ async function run() {
       outputTemplate,
       url,
     ],
-    stdout: "inherit",
-    stderr: "inherit",
+    stdout: "pipe",
+    stderr: "pipe",
   });
 
   const exitCode = await downloadProc.exited;
