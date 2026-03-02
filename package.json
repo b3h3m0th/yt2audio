@@ -1,0 +1,24 @@
+{
+  "name": "yt2audio",
+  "author": "Simon Ostini",
+  "module": "./src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun ./src/index.ts",
+    "build": "bun build src/index.ts --compile --outfile build/yt2audio.exe"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "inquirer": "^13.3.0"
+  },
+  "bin": {
+    "yt2audio": "./src/index.ts"
+  }
+}
